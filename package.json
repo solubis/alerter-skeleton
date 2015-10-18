@@ -2,7 +2,7 @@
     "version": "1.0.0-SNAPSHOT.20158281633",
     "name": "alerter-skeleton",
     "description": "Alerter",
-    "repository": "",
+    "repository": "git@gitlab.com:solubis/alerter-skeleton.git",
     "license": "Unlicense",
     "devDependencies": {
         "grunt": "*",
