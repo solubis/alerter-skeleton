@@ -1,0 +1,28 @@
+{
+    "name": "FDS Skeleton",
+    "version": "1.0.0",
+    "authors": [
+        "Jurek Błaszczyk"
+    ],
+    "description": "FDS Skeleton",
+    "license": "Unlicense",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "lib",
+        "test",
+        "tests",
+        "pages",
+        "index.html",
+        "/js"
+    ],
+    "dependencies": {
+        "core": "git@code.impaqgroup.com:fds-components/core.git#develop",
+        "ui": "git@code.impaqgroup.com:fds-components/ui.git#develop"
+    },
+    "devDependencies": {
+        "angular-mocks": "1.4.x",
+        "system.js": "*",
+        "jasmine-jquery": "2.x"
+    }
+}

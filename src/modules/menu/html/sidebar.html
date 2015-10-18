@@ -1,0 +1,62 @@
+<aside id="sidebar" ng-controller="MenuController as ctrl">
+    <div class="sidebar-inner">
+        <div class="si-inner">
+            <div class="profile-menu sub-menu">
+                <a href="">
+                    <div class="profile-pic">
+                        <img src="images/avatar.jpg" alt="">
+                    </div>
+
+                    <div class="profile-info">
+                        {{ ctrl.userFullName }}
+
+                        <i class="md md-arrow-drop-down"></i>
+                    </div>
+                </a>
+
+                <ul class="main-menu">
+                    <li>
+                        <a href="" ng-click="ctrl.showProfile()"><i class="md md-person"></i> {{'Profile'|translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="ctrl.showSettings()"><i class="md md-settings"></i>
+                            {{'Permissions'|translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="ctrl.logout()"><i class="md md-history"></i> {{'Logout'|translate}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="main-menu">
+                <li><a href ng-click="ctrl.showHelp()"><i class="md md-help"></i> {{'Help'|translate}}
+                </a></li>
+
+                <li authorize="ALERTER_ALERT_LIST"><a ui-sref="alerts"><i class="md md-today"></i>
+                    {{'Alerts'|translate}}
+                </a></li>
+
+                <li class="sub-menu active toggled">
+                    <a href=""><i class="md md-settings"></i> {{'Sample Menu'|translate}}
+                    </a>
+                    <ul>
+                        <li><a href>{{'Sample Menu'|translate}}
+                        </a></li>
+                        <li><a href>{{'Sample Menu'|translate}}
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="footer-menu">
+                <li>
+                    <div sidebar-switch></div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</aside>

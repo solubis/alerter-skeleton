@@ -1,0 +1,146 @@
+// Alert List
+
+.alert-list {
+    height: 100%;
+    margin-bottom: 20px;
+
+    .card-header {
+        background-color: @gray-lightest;
+        padding: 18px;
+        i {
+            vertical-align: top;
+            font-size: 13px;
+        }
+        h2 {
+            small {
+                display: inline;
+            }
+        }
+    }
+
+    .toolbar {
+        .actions {
+            position: relative;
+            float: right;
+            padding-right: 45px;
+        }
+
+        .actions.selected {
+            float:left;
+            padding-left: 25px;
+
+            h2 {
+                font-size: 12px;
+                color: @gray;
+                margin: 0;
+                padding-right: 20px;
+                font-weight: 400;
+                text-transform: uppercase;
+
+                i {
+                    color: @gray;
+                    font-size: 1.4em;
+                }
+            }
+
+        }
+    }
+
+    .filter {
+        @media screen and (max-width: 991px) {
+            padding-top: 20px;
+        }
+    }
+
+    .form-group label {
+        margin-bottom: 3px;
+    }
+
+    .multi-select {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .filter .multiSelect > button {
+        width: 100%;
+        text-transform: none;
+        padding: 6px 0;
+        box-shadow: none !important;
+        border: 1px @gray-lighter solid;
+    }
+
+    .filter-button {
+        margin-top: 21px;
+    }
+
+    .table > thead > tr > th:first-child, .table > tbody > tr > th:first-child, .table > tfoot > tr > th:first-child, .table > thead > tr > td:first-child, .table > tbody > tr > td:first-child, .table > tfoot > tr > td:first-child {
+        padding-left: 20px;
+    }
+
+    .table {
+        tr {
+            height: 35px;
+            .checkbox{
+                padding-bottom: 2px;
+            }
+        }
+    }
+
+    td > .checkbox {
+        top: -8px;
+    }
+
+    th > .checkbox {
+        top: -16px;
+    }
+}
+
+// Alert View
+
+.alert-view {
+
+    .card-body {
+        padding: 0 20px;
+    }
+
+    table.alert-details {
+        td {
+            line-height: 3rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:first-child {
+                min-width: 150px;
+                text-align: right;
+                font-weight: bold;
+            }
+
+            &:not(:first-child) {
+                padding-left: 20px;
+                text-align: left;
+            }
+
+            &.wrap-words {
+                white-space: pre-line;
+                line-height: 1;
+            }
+        }
+
+        span.label {
+            float: left;
+            margin-top: 2px;
+        }
+    }
+
+    .description,
+    pre.prettyprint {
+        padding: 10px;
+        background-color: white;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.alert-edit {
+}

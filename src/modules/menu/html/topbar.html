@@ -1,0 +1,33 @@
+<header id="header" ng-controller="MenuController as ctrl">
+    <ul class="header-inner">
+        <li id="sidebar-trigger" data-trigger="#sidebar">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+
+        <li class="logo hidden-xxs">
+            <a href="#">FDS Skeleton
+                <span class="version hidden-xs" ng-if="$version"> v{{ $version }} (srv: {{ $restVersion }})</span>
+            </a>
+        </li>
+
+        <li class="pull-right">
+            <ul class="top-menu">
+                <li class="dropdown" ng-include="'launcher.html'"></li>
+            </ul>
+        </li>
+    </ul>
+
+    <button
+        class="btn btn-danger btn-float"
+        tooltip="{{'Create alert'|translate}}"
+        tooltip-placement="bottom"
+        authorize="ALERTER_ALERT_CREATE"
+        ng-click="ctrl.addAlert()">
+        <i class="md md-add"></i>
+    </button>
+
+</header>

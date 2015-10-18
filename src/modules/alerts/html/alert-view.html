@@ -1,0 +1,110 @@
+<div class="alert-view">
+
+    <div class="toolbar">
+
+        <div class="buttons">
+            <button class="btn btn-primary btn-sm"  type="button" ui-sref="alerts">
+                <i class="md md-arrow-back"></i>&nbsp;{{'Alert list'|translate}}
+            </button>
+
+            <div class="btn-group btn-group-sm m-l-10 hidden-sm hidden-xs" role="group">
+                <button class="btn btn-default" ng-click="ctrl.edit()" ng-if="ctrl.hasPermissionToEdit()" type="button" translate>
+                    Edit
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="block-header">
+            <h2>Alert
+                <small>{{'ID:'|translate}}
+                    {{ ctrl.alert.id }}
+                </small>
+            </h2>
+        </div>
+
+        <div class="card">
+
+            <div class="card-header">
+                <h2>{{ ctrl.alert.title }}
+                    <small>Podtytuł</small>
+                </h2>
+
+                <ul class="actions">
+
+                    <li class="">
+                        <a href="" ng-click="ctrl.edit()" ng-if="ctrl.hasPermissionToEdit()" tooltip-placement="bottom"
+                           tooltip="{{'Edit'|translate}}">
+                            <i class="md md-edit"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="card-body">
+
+                <tabset>
+
+                    <!-- Basic info -->
+
+                    <tab heading="{{'Alert details'|translate}}">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                                <table class="alert-details">
+                                    <tr>
+                                        <td translate>Category</td>
+                                        <td>{{ ctrl.alert.category}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Product</td>
+                                        <td>{{ ctrl.alert.product}}</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <table class="alert-details">
+                                    <tr>
+                                        <td translate>Creation date</td>
+                                        <td>{{ ctrl.alert.creationDate | dateFormat }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Modification date</td>
+                                        <td>{{ ctrl.alert.modificationDate | dateFormat }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Creator</td>
+                                        <td class="two-lines">{{ ctrl.alert.createdByFullName }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td translate>Assignee</td>
+                                        <td class="two-lines">
+                                            <span>{{ ctrl.alert.assignee.userFullName }}</span>
+                                            <small>{{ ctrl.alert.assignee.hierarchyName }}
+                                                /
+                                                {{ ctrl.alert.assignee.groupName }}
+                                            </small>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </tab>
+
+                </tabset>
+
+            </div>
+        </div>
+    </div>
+
+</div>
